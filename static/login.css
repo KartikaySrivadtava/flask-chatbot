@@ -1,0 +1,153 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  /* BACKGROUND */
+  body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top, #1b1f24, #0e1116);
+    overflow: hidden;
+  }
+  
+  /* TOP RIGHT BRAND */
+  .top-brand {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    z-index: 10;
+  }
+  
+  .top-brand img {
+    height: 38px;
+    opacity: 0.85;
+    mix-blend-mode: multiply;
+    transition: opacity 0.3s ease;
+  }
+  
+  .top-brand img:hover {
+    opacity: 1;
+  }
+  
+  /* SCENE */
+  .scene {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* BRAND HALO */
+  .brand-halo {
+    position: absolute;
+    width: 540px;
+    height: 540px;
+    background: radial-gradient(
+      circle,
+      rgba(0, 176, 102, 0.28),
+      transparent 65%
+    );
+    filter: blur(50px);
+    opacity: 0.55;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* HALO REACTION */
+  .brand-halo.active {
+    opacity: 0.85;
+    transform: scale(1.05);
+  }
+  
+  /* LOGIN CARD */
+  .login-card {
+    position: relative;
+    z-index: 2;
+    width: 340px;
+    padding: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.55);
+  
+    /* subtle floating motion */
+    animation: floatCard 6s ease-in-out infinite;
+  }
+  
+  /* FLOAT ANIMATION */
+  @keyframes floatCard {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* TITLE */
+  .login-card h1 {
+    margin-bottom: 6px;
+  }
+  
+  /* SECURITY LABEL */
+  .secure-label {
+    font-size: 12px;
+    opacity: 0.65;
+    margin-bottom: 20px;
+  }
+  
+  /* ERROR */
+  .error {
+    color: #ff6b6b;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  
+  /* INPUTS */
+  .login-card input {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  /* BUTTON */
+  .login-card button {
+    width: 100%;
+    padding: 11px;
+    background: #00b066; /* Syntegon green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  }
+  
+  .login-card button:hover {
+    background: #009157;
+  }
+  
+  .login-card button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 12px rgba(0,176,102,0.35);
+  }
+  body {
+    margin: 0;
+    height: 100vh;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(0,176,102,0.05), transparent 45%),
+      radial-gradient(circle at 70% 70%, rgba(0,176,102,0.035), transparent 50%),
+      #101418;;
+    animation: bgDrift 24s ease-in-out infinite alternate;
+    overflow: hidden;
+  }
+  
+  @keyframes bgDrift {
+    from { background-position: 0% 0%; }
+    to   { background-position: 100% 100%; }
+  }
+  
