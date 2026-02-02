@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SynteBot — Enterprise Chat</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <h1>
+        <span class="synte">Synte</span><span class="bot">Bot</span>
+      </h1>
+    </div>
+  
+    <div class="header-center">
+      <h1 class="syntegon">Syntegon</h1>
+    </div>
+  
+    <div class="header-right">
+      <a href="/logout" class="logout-btn">Logout</a>
+  
+      <img
+        src="/static/coc.png"
+        alt="CoCreate CoSucceed"
+        class="cocreate-logo"
+      />
+    </div>
+  </header>
+  
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-heading">SAMI, Tagetik and Redwood</div>
+
+    <button id="newChatBtn" class="new-chat-btn">+ New Chat</button>
+
+    <!-- Past Chats -->
+    <div class="past-prompts">
+      <h4>Past Chats</h4>
+      <div id="past-prompts" class="past-list"></div>
+    </div>
+
+    <!-- Contacts -->
+    <div class="contact">
+      <div class="contact-name">Kartikay Srivastava (FC-TO)</div>
+      <div class="contact-email">Kartikay.Srivastava@syntegon.com</div>
+    </div>
+    
+    <div class="contact">
+      <div class="contact-name">Divyam Talreja (FC-TO)</div>
+      <div class="contact-email">Divyam.talreja@syntegon.com</div>
+    </div>
+    
+    <div class="contact">
+      <div class="contact-name">Julia Kreft (FC-TO)</div>
+      <div class="contact-email">Julia.Kreft@syntegon.com</div>
+    </div>    
+  </aside>
+
+  <!-- CHAT -->
+  <main class="chat">
+    <div class="chat-title"></div>
+    <div id="messages" class="messages"></div>
+
+    <div class="composer">
+      <textarea id="input" rows="2" placeholder="Ask something…"></textarea>
+      <button id="send">Send</button>
+    </div>
+  </main>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
